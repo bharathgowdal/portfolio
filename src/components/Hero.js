@@ -6,6 +6,7 @@ import Container from "./Container";
 import { useEffect, useState } from "react";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { MdMail } from "react-icons/md";
 
 const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -99,19 +100,41 @@ const Hero = () => {
             </div>
           </span>
           <FlexRow style={{ justifyContent: "start", marginBottom: "1rem" }}>
-            <BsLinkedin
-              style={{
-                marginRight: "1rem",
-                borderRadius: "20px",
-                color: "var(--text-primary)",
-              }}
-            />
-
+            <a
+              href="https://www.linkedin.com/in/bharath-gowda-l-394186244/"
+              target="blank"
+            >
+              <BsLinkedin
+                style={{
+                  marginRight: "1rem",
+                  borderRadius: "20px",
+                  color: "var(--text-primary)",
+                }}
+              />
+            </a>
+            {/* <a
+              href="https://www.linkedin.com/in/bharath-gowda-l-394186244/"
+              target="blank"
+            >
             <BsGithub
               style={{
                 color: "var(--text-primary)",
               }}
-            />
+            /></a> */}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bharathgowdaart@gmail.com"
+              target="_blank"
+            >
+              <MdMail
+                style={{
+                  marginRight: "1rem",
+                  borderRadius: "20px",
+                  padding: "2px",
+                  backgroundColor: "var(--text-primary)",
+                  color: "var(--background)",
+                }}
+              />
+            </a>
           </FlexRow>
         </FlexColumn>
         {/* <motion.div
@@ -193,19 +216,24 @@ const Hero = () => {
         style={{ width: "100%", justifyContent: "center", margin: "2rem" }}
       >
         <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-          <button
-            style={{
-              padding: "0.5rem 1.5rem",
-              backgroundColor: "var(--text-secondary)",
-              borderRadius: "50px",
-              fontWeight: "bolder",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-            }}
+          <a
+            href="https://drive.google.com/file/d/18CkpxaUGARsZdRDQqQI59YRndbWLG_c7/view?usp=share_link"
+            target="blank"
           >
-            DOWNLOAD CV
-          </button>
+            <button
+              style={{
+                padding: "0.5rem 1.5rem",
+                backgroundColor: "var(--text-secondary)",
+                borderRadius: "50px",
+                fontWeight: "bolder",
+                color: "white",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              DOWNLOAD CV
+            </button>
+          </a>
         </motion.div>
       </FlexRow>
     </Container>

@@ -45,7 +45,9 @@ const Artist = () => {
                 borderRadius: "50px",
               }}
             >
-              <BsInstagram style={{ width: "20px", height: "20px" }} />
+              <a href="https://www.instagram.com/shrikalpak/" target="blank">
+                <BsInstagram style={{ width: "20px", height: "20px" }} />
+              </a>
             </div>
             <div
               style={{
@@ -58,7 +60,12 @@ const Artist = () => {
                 marginLeft: "1rem",
               }}
             >
-              <FiMail style={{ width: "20px", height: "20px" }} />
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bharathgowdaart@gmail.com"
+                target="_blank"
+              >
+                <FiMail style={{ width: "20px", height: "20px" }} />
+              </a>
             </div>
           </FlexRow>
         </Container>

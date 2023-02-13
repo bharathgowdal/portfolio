@@ -19,56 +19,56 @@ function App() {
     "theme",
     defaultDark ? "dark" : "light"
   );
+
   const switchTheme = () => {
-    console.log("theme change");
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
   };
 
-  function triggerEvent(eventName, keyCode) {
-    var event; // The custom event that will be created
+  // function triggerEvent(eventName, keyCode) {
+  //   var event; // The custom event that will be created
 
-    if (document.createEvent) {
-      event = document.createEvent("HTMLEvents");
-      event.initEvent(eventName, true, true);
-    } else {
-      event = document.createEventObject();
-      event.eventType = eventName;
-    }
+  //   if (document.createEvent) {
+  //     event = document.createEvent("HTMLEvents");
+  //     event.initEvent(eventName, true, true);
+  //   } else {
+  //     event = document.createEventObject();
+  //     event.eventType = eventName;
+  //   }
 
-    event.eventName = eventName;
-    event.keyCode = keyCode || null;
+  //   event.eventName = eventName;
+  //   event.keyCode = keyCode || null;
 
-    if (document.createEvent) {
-      document.dispatchEvent(event);
-    } else {
-      document.fireEvent("on" + event.eventType, event);
-    }
-  }
+  //   if (document.createEvent) {
+  //     document.dispatchEvent(event);
+  //   } else {
+  //     document.fireEvent("on" + event.eventType, event);
+  //   }
+  // }
 
-  const keypress = () => {
-    setOpen(true);
-    triggerEvent("keydown", 123);
-    triggerEvent("keyup");
-  };
-  useEffect(() => {
-    console.log(
-      Object.defineProperties(new Error(), {
-        toString: {
-          value() {
-            new Error().stack.includes("toString@") && alert("Safari devtools");
-          },
-        },
-        message: {
-          get() {
-            keypress();
-          },
-        },
-      })
-    );
-    if (navigator.webdriver) {
-    }
-  }, []);
+  // const keypress = () => {
+  //   setOpen(true);
+  //   triggerEvent("keydown", 123);
+  //   triggerEvent("keyup");
+  // };
+  // useEffect(() => {
+  //   console.log(
+  //     Object.defineProperties(new Error(), {
+  //       toString: {
+  //         value() {
+  //           new Error().stack.includes("toString@") && alert("Safari devtools");
+  //         },
+  //       },
+  //       message: {
+  //         get() {
+  //           keypress();
+  //         },
+  //       },
+  //     })
+  //   );
+  //   if (navigator.webdriver) {
+  //   }
+  // }, []);
 
   return navigator.webdriver ? (
     <>Loading</>
@@ -129,7 +129,7 @@ function App() {
       >
         <Contact />
       </motion.div>
-      <NavBar />
+      {/* <NavBar /> */}
     </div>
   );
 }
