@@ -37,6 +37,7 @@ const Artist = () => {
           <FlexRow style={{ justifyContent: "right" }}>
             <div
               style={{
+                textDecoration: "none",
                 backgroundColor: "var(--text-primary)",
                 color: "var(--background)",
                 width: "40px",
@@ -45,8 +46,18 @@ const Artist = () => {
                 borderRadius: "50px",
               }}
             >
-              <a href="https://www.instagram.com/shrikalpak/" target="blank">
-                <BsInstagram style={{ width: "20px", height: "20px" }} />
+              <a
+                href="https://www.instagram.com/shrikalpak/"
+                style={{ textDecoration: "none" }}
+                target="blank"
+              >
+                <BsInstagram
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    textDecoration: "none",
+                  }}
+                />
               </a>
             </div>
             <div
